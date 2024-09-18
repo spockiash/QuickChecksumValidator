@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="HelloWorld" xml:space="preserve">
+        <value>Test EN</value>
+    </data>
+    <data name="HelpHeading" xml:space="preserve">
+        <value>Quick Checksum Validator v1.0</value>
+    </data>
+    <data name="HelpCopyright" xml:space="preserve">
+        <value>Copyright (c) 2024 D.F under the MIT License</value>
+    </data>
+    <data name="HelpUsage" xml:space="preserve">
+        <value>Usage: checksum-validator &lt;filepath&gt; &lt;knownhash&gt; [options]</value>
+    </data>
+    <data name="ErrorMessage" xml:space="preserve">
+        <value>Error: {0}</value>
+    </data>
+    <data name="ErrorHint" xml:space="preserve">
+        <value>For more information run checksum-validator --help</value>
+    </data>
+    <data name="DisplaySupportedAlgorithms" xml:space="preserve">
+        <value>The following is the list of supported options:</value>
+    </data>
+    <data name="ErrorUnknownOption" xml:space="preserve">
+        <value>Error: Bad token, unknown option provided: '{0}'</value>
+    </data>
+    <data name="ValidationSuccessMessage" xml:space="preserve">
+        <value>[S] Validation Success: Computed checksum matched provided known checksum.</value>
+    </data>
+    <data name="ValidationFailMessage" xml:space="preserve">
+        <value>[X] Validation Fail: Computed checksum does not match provided known checksum!</value>
+    </data>
+    <data name="FileChekcedMessage" xml:space="preserve">
+        <value>File checked: 		{0}</value>
+    </data>
+    <data name="SelectedAlgorithmMessage" xml:space="preserve">
+        <value>Algorithm: 		{0}</value>
+    </data>
+    <data name="ComputedChecksumMessage" xml:space="preserve">
+        <value>Computed checksum: 	{0}</value>
+    </data>
+    <data name="ProvidedChecksumMessage" xml:space="preserve">
+        <value>Provided checksum: 	{0}</value>
+    </data>
+</root>

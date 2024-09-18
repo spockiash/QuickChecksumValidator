@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6D/vg6hqxps=",
+  "success": true,
+  "projectFilePath": "/home/bobo/RiderProjects/QuickChecksumValidator/ChecksumValidator.CLI/ChecksumValidator.CLI.csproj",
+  "expectedPackageFiles": [
+    "/home/bobo/.nuget/packages/commandlineparser/2.9.1/commandlineparser.2.9.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,14 @@
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/bin/Debug/net8.0/CLI_Tool
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/bin/Debug/net8.0/CLI_Tool.deps.json
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/bin/Debug/net8.0/CLI_Tool.runtimeconfig.json
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/bin/Debug/net8.0/CLI_Tool.dll
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/bin/Debug/net8.0/CLI_Tool.pdb
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.GeneratedMSBuildEditorConfig.editorconfig
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.AssemblyInfoInputs.cache
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.AssemblyInfo.cs
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.csproj.CoreCompileInputs.cache
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.dll
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/refint/CLI_Tool.dll
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.pdb
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/CLI_Tool.genruntimeconfig.cache
+/home/bobo/RiderProjects/CLI_Tool/CLI_Tool/obj/Debug/net8.0/ref/CLI_Tool.dll
