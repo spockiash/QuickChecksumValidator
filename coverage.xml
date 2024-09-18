@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root CoveredStatements="94" TotalStatements="267" CoveragePercent="35" ReportType="Xml" DotCoverVersion="2024.2.4">
+  <Assembly Name="ChecksumValidator.CLI" CoveredStatements="51" TotalStatements="224" CoveragePercent="23">
+    <Namespace Name="ChecksumValidator.CLI" CoveredStatements="37" TotalStatements="102" CoveragePercent="36">
+      <Type Name="ArgumentParser" CoveredStatements="7" TotalStatements="61" CoveragePercent="11">
+        <Constructor Name="ArgumentParser(Action&lt;ParserSettings&gt;)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        <AutoProperty Name="Parser:Parser" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <Method Name="GetParsedAlgorithm(Options):AlgoType" CoveredStatements="0" TotalStatements="13" CoveragePercent="0" />
+        <Method Name="HandleGenericError(Error):void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+        <Method Name="ParseAlgorithm(string):AlgoType" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>5</TestIndex>
+            <TestIndex>6</TestIndex>
+            <TestIndex>7</TestIndex>
+            <TestIndex>8</TestIndex>
+            <TestIndex>9</TestIndex>
+            <TestIndex>10</TestIndex>
+            <TestIndex>11</TestIndex>
+            <TestIndex>12</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="ParseArguments(string[]):ParsedArgumentsDto" CoveredStatements="0" TotalStatements="28" CoveragePercent="0">
+          <OwnCoverage CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          <AnonymousMethod Name="(Options):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+          <AnonymousMethod Name="(IEnumerable&lt;Error&gt;):void" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+        </Method>
+      </Type>
+      <Type Name="ChecksumProvider" CoveredStatements="27" TotalStatements="32" CoveragePercent="84">
+        <Method Name="ComputeHash(string,AlgoType):string" CoveredStatements="16" TotalStatements="20" CoveragePercent="80">
+          <TestIndices>
+            <TestIndex>1</TestIndex>
+            <TestIndex>2</TestIndex>
+            <TestIndex>3</TestIndex>
+            <TestIndex>4</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="CreateHashAlgorithm(AlgoType):HashAlgorithm" CoveredStatements="6" TotalStatements="7" CoveragePercent="86">
+          <TestIndices>
+            <TestIndex>1</TestIndex>
+            <TestIndex>2</TestIndex>
+            <TestIndex>3</TestIndex>
+            <TestIndex>4</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="ValidateIntegrity(ParsedArgumentsDto):ValidationResultDto" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>1</TestIndex>
+            <TestIndex>2</TestIndex>
+            <TestIndex>3</TestIndex>
+            <TestIndex>4</TestIndex>
+          </TestIndices>
+        </Method>
+      </Type>
+      <Type Name="InvalidAlgorithmException" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
+        <Constructor Name="InvalidAlgorithmException(string)" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>6</TestIndex>
+            <TestIndex>11</TestIndex>
+            <TestIndex>12</TestIndex>
+          </TestIndices>
+        </Constructor>
+      </Type>
+      <Type Name="Options" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+        <AutoProperty Name="FilePath:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="KnownHash:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="SelectedAlgorithm:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+      </Type>
+    </Namespace>
+    <Namespace Name="ChecksumValidator.CLI.Dto" CoveredStatements="7" TotalStatements="16" CoveragePercent="44">
+      <Type Name="ValidationResultDto" CoveredStatements="7" TotalStatements="16" CoveragePercent="44">
+        <Constructor Name="ValidationResultDto(bool,string,string,string,AlgoType)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>1</TestIndex>
+            <TestIndex>2</TestIndex>
+            <TestIndex>3</TestIndex>
+            <TestIndex>4</TestIndex>
+          </TestIndices>
+        </Constructor>
+        <AutoProperty Name="CalculatedHash:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="KnownHash:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="PathToFile:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="UsedAlgorithm:AlgoType" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="ValidationSuccess:bool" CoveredStatements="1" TotalStatements="2" CoveragePercent="50">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>1</TestIndex>
+              <TestIndex>2</TestIndex>
+              <TestIndex>3</TestIndex>
+              <TestIndex>4</TestIndex>
+            </TestIndices>
+          </PropertyGetter>
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+      </Type>
+    </Namespace>
+    <Namespace Name="ChecksumValidator.CLI.Dtos" CoveredStatements="7" TotalStatements="19" CoveragePercent="37">
+      <Type Name="ParsedArgumentsDto" CoveredStatements="7" TotalStatements="19" CoveragePercent="37">
+        <Constructor Name="ParsedArgumentsDto(string,string,AlgoType)" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>1</TestIndex>
+            <TestIndex>2</TestIndex>
+            <TestIndex>3</TestIndex>
+            <TestIndex>4</TestIndex>
+          </TestIndices>
+        </Constructor>
+        <AutoProperty Name="FilePath:string" CoveredStatements="1" TotalStatements="2" CoveragePercent="50">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>1</TestIndex>
+              <TestIndex>2</TestIndex>
+              <TestIndex>3</TestIndex>
+              <TestIndex>4</TestIndex>
+            </TestIndices>
+          </PropertyGetter>
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="KnownHash:string" CoveredStatements="1" TotalStatements="2" CoveragePercent="50">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>1</TestIndex>
+              <TestIndex>2</TestIndex>
+              <TestIndex>3</TestIndex>
+              <TestIndex>4</TestIndex>
+            </TestIndices>
+          </PropertyGetter>
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="SelectedAlgorithm:AlgoType" CoveredStatements="1" TotalStatements="2" CoveragePercent="50">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>1</TestIndex>
+              <TestIndex>2</TestIndex>
+              <TestIndex>3</TestIndex>
+              <TestIndex>4</TestIndex>
+            </TestIndices>
+          </PropertyGetter>
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <Method Name="SetAlgorithm(AlgoType):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="SetFilePath(string):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="SetKnownHash(string):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+      </Type>
+    </Namespace>
+    <Namespace Name="ChecksumValidator.CLI.Helpers" CoveredStatements="0" TotalStatements="58" CoveragePercent="0">
+      <Type Name="DisplayHelper" CoveredStatements="0" TotalStatements="58" CoveragePercent="0">
+        <Method Name="DisplayError(string):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="DisplayHelp(ParserResult&lt;Options&gt;):void" CoveredStatements="0" TotalStatements="12" CoveragePercent="0">
+          <OwnCoverage CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <AnonymousMethod Name="(HelpText):HelpText" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          <AnonymousMethod Name="(Example):Example" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Method>
+        <Method Name="DisplayResult(ValidationResultDto):void" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+        <Method Name="DisplaySupportedAlgorithms():void" CoveredStatements="0" TotalStatements="22" CoveragePercent="0" />
+        <Method Name="DisplayUnknownOptionError(string):void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        <Method Name="DisplayUsage():void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+      </Type>
+    </Namespace>
+    <Type Name="Program" CoveredStatements="0" TotalStatements="29" CoveragePercent="0">
+      <AutoProperty Name="ArgParser:ArgumentParser" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+        <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+      </AutoProperty>
+      <AutoProperty Name="ChecksumProvider:ChecksumProvider" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+        <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+      </AutoProperty>
+      <AutoProperty Name="ParsedArguments:ParsedArgumentsDto" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+        <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+      </AutoProperty>
+      <Method Name="&lt;Main&gt;$(string[]):void" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+      <Method Name="Initialize(string[]):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0">
+        <OwnCoverage CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        <AnonymousMethod Name="(ParserSettings):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+      </Method>
+      <Method Name="PerformHash():void" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+      <Method Name="ValidateParsedArgumentsDto(ParsedArgumentsDto):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+    </Type>
+  </Assembly>
+  <Assembly Name="TestProject1" CoveredStatements="43" TotalStatements="43" CoveragePercent="100">
+    <Namespace Name="TestProject1" CoveredStatements="43" TotalStatements="43" CoveragePercent="100">
+      <Type Name="ArgumentParserTests" CoveredStatements="35" TotalStatements="35" CoveragePercent="100">
+        <Method Name="ParseAlgorithm_EmptyString_ReturnsDefaultMD5Enum():void" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+          <OwnCoverage CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>12</TestIndex>
+            </TestIndices>
+          </OwnCoverage>
+          <AnonymousMethod Name="():void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>12</TestIndex>
+            </TestIndices>
+          </AnonymousMethod>
+          <TestIndices />
+        </Method>
+        <Method Name="ParseAlgorithm_InvalidString_ReturnsDefaultMD5Enum():void" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+          <OwnCoverage CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>11</TestIndex>
+            </TestIndices>
+          </OwnCoverage>
+          <AnonymousMethod Name="():void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>11</TestIndex>
+            </TestIndices>
+          </AnonymousMethod>
+          <TestIndices />
+        </Method>
+        <Method Name="ParseAlgorithm_NullString_ReturnsDefaultMD5Enum():void" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+          <OwnCoverage CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>6</TestIndex>
+            </TestIndices>
+          </OwnCoverage>
+          <AnonymousMethod Name="():void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <TestIndices>
+              <TestIndex>6</TestIndex>
+            </TestIndices>
+          </AnonymousMethod>
+          <TestIndices />
+        </Method>
+        <Method Name="ParseAlgorithm_ValidLowercaseString_ReturnsCorrectEnum():void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>9</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="ParseAlgorithm_ValidMD5String_ReturnsMD5Enum():void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>8</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="ParseAlgorithm_ValidMixedCaseString_ReturnsCorrectEnum():void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>5</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="ParseAlgorithm_ValidSHA1String_ReturnsSHA1Enum():void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>7</TestIndex>
+          </TestIndices>
+        </Method>
+        <Method Name="ParseAlgorithm_ValidSHA256String_ReturnsSHA256Enum():void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>10</TestIndex>
+          </TestIndices>
+        </Method>
+      </Type>
+      <Type Name="ChecksumProviderTests" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+        <Method Name="EmptyFileChecksumProviderTest(string,AlgoType,bool):void" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+          <TestIndices>
+            <TestIndex>1</TestIndex>
+            <TestIndex>2</TestIndex>
+            <TestIndex>3</TestIndex>
+            <TestIndex>4</TestIndex>
+          </TestIndices>
+        </Method>
+      </Type>
+    </Namespace>
+  </Assembly>
+  <TestIndices>
+    <Test Index="5" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_ValidMixedCaseString_ReturnsCorrectEnum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="6" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_NullString_ReturnsDefaultMD5Enum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="7" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_ValidSHA1String_ReturnsSHA1Enum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="8" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_ValidMD5String_ReturnsMD5Enum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="9" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_ValidLowercaseString_ReturnsCorrectEnum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="10" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_ValidSHA256String_ReturnsSHA256Enum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="11" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_InvalidString_ReturnsDefaultMD5Enum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="12" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ArgumentParserTests.ParseAlgorithm_EmptyString_ReturnsDefaultMD5Enum" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="1" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ChecksumProviderTests.EmptyFileChecksumProviderTest.EmptyFileChecksumProviderTest(checksum: &quot;invalidchecksum&quot;, algorithm: Sha256, expectedResult: False)" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="2" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ChecksumProviderTests.EmptyFileChecksumProviderTest.EmptyFileChecksumProviderTest(checksum: &quot;d41d8cd98f00b204e9800998ecf8427e&quot;, algorithm: Md5, expectedResult: True)" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="3" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ChecksumProviderTests.EmptyFileChecksumProviderTest.EmptyFileChecksumProviderTest(checksum: &quot;da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;, algorithm: Sha1, expectedResult: True)" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+    <Test Index="4" Session="b2747d2f-ab21-437b-b059-4d6f8723e98" Name="TestProject1.ChecksumProviderTests.EmptyFileChecksumProviderTest.EmptyFileChecksumProviderTest(checksum: &quot;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca4&quot;···, algorithm: Sha256, expectedResult: True)" Assembly="C3525E3B-F16A-4F9D-81C4-0E28E22F024C" Provider="xUnit" TargetFramework="net8.0" />
+  </TestIndices>
+</Root>
