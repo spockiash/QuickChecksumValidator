@@ -47,7 +47,7 @@ public class ChecksumProvider : IChecksumProvider
         }
     }
 
-    private HashAlgorithm? CreateHashAlgorithm(AlgoType algorithmType)
+    private static HashAlgorithm? CreateHashAlgorithm(AlgoType algorithmType)
     {
         return algorithmType switch
         {

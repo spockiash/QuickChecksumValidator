@@ -6,7 +6,7 @@ using CommandLine;
 namespace ChecksumValidator.CLI;
 
 public class ArgumentParser
-{
+{ 
     /// <summary>
     /// Constructs parser object that wraps command line parser provided by NuGet package.
     /// </summary>
@@ -22,30 +22,16 @@ public class ArgumentParser
     {
         var parsedArguments = new ParsedArgumentsDto(null, null);
         var parsingResult = Parser?.ParseArguments<Options>(args);
+
         parsingResult.WithParsed(options =>
         {
             //set parsed values into dto
             parsedArguments.SetFilePath(options.FilePath);
             parsedArguments.SetKnownHash(options.KnownHash);
             //Parse provided string value into AlgoType enum and store into dto
-            if (options.SelectedAlgorithm != null)
-            {
-                try
-                {
-                    parsedArguments.SetAlgorithm(ParseAlgorithm(options.SelectedAlgorithm));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    DisplayHelper.DisplaySupportedAlgorithms();
-                    Environment.Exit(1); // Exit the program with an error code
-                }
-            }
-            else
-            {
-                parsedArguments.SelectedAlgorithm = AlgoType.Md5;
-            }
-        }).WithNotParsed(errors =>
+            parsedArguments.SetAlgorithm(GetParsedAlgorithm(options));
+        });
+        parsingResult.WithNotParsed(errors =>
         {
             //Iterate over errors when present
             foreach (var error in errors)
@@ -64,8 +50,23 @@ public class ArgumentParser
         
         return parsedArguments;
     }
+    private AlgoType GetParsedAlgorithm(Options options)
+    {
+        if (options.SelectedAlgorithm == null) return AlgoType.Md5;
+        try
+        {
+            return ParseAlgorithm(options.SelectedAlgorithm);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            DisplayHelper.DisplaySupportedAlgorithms();
+            Environment.Exit(1); // Exit the program with an error code
+        }
+        return AlgoType.Md5;
+    }
 
-    private void HandleGenericError(Error error)
+    private static void HandleGenericError(Error error)
     {
         switch (error)
         {
@@ -82,14 +83,14 @@ public class ArgumentParser
     /// <summary>
     /// Converts the algorithm string to AlgoType, defaulting to MD5 if the input is null or invalid.
     /// </summary>
-    public AlgoType ParseAlgorithm(string? algorithmString)
+    public static AlgoType ParseAlgorithm(string? algorithmString)
     {
         var success = Enum.TryParse(typeof(AlgoType), algorithmString, true, out var algoEnum);
         
-        if (success)
+        if (success && algoEnum != null)
         {
             // If parsing succeeds, cast and return the parsed enum value
-            return (AlgoType)(algoEnum ?? AlgoType.Md5);
+            return (AlgoType)(algoEnum);
         }
 
         // If parsing fails, print the supported algorithms and return the default

@@ -104,3 +104,4 @@
 /home/bobo/RiderProjects/QuickChecksumValidator/TestProject1/obj/Debug/net8.0/TestProject1.pdb
 /home/bobo/RiderProjects/QuickChecksumValidator/TestProject1/obj/Debug/net8.0/TestProject1.genruntimeconfig.cache
 /home/bobo/RiderProjects/QuickChecksumValidator/TestProject1/obj/Debug/net8.0/ref/TestProject1.dll
+/home/bobo/RiderProjects/QuickChecksumValidator/TestProject1/obj/Debug/net8.0/TestProject1.sourcelink.json
