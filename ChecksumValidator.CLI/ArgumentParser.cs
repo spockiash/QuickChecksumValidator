@@ -65,7 +65,7 @@ public class ArgumentParser
         return parsedArguments;
     }
 
-    private void HandleGenericError(Error error)
+    private static void HandleGenericError(Error error)
     {
         switch (error)
         {
