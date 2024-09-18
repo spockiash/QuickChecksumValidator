@@ -1,7 +1,7 @@
-using CLI_Tool.Dto;
-using CLI_Tool.Dtos;
+using ChecksumValidator.CLI.Dto;
+using ChecksumValidator.CLI.Dtos;
 
-namespace CLI_Tool;
+namespace ChecksumValidator;
 
 public interface IChecksumProvider
 {

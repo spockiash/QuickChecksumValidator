@@ -1,6 +1,6 @@
 using CommandLine;
 
-namespace CLI_Tool;
+namespace ChecksumValidator.CLI;
 
 public class Options
 {

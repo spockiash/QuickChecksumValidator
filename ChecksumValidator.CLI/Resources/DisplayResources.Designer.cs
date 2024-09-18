@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CLI_Tool {
+namespace ChecksumValidator.CLI {
     using System;
     
     

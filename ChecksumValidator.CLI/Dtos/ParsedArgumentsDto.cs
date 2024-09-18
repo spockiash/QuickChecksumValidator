@@ -1,6 +1,6 @@
-using CLI_Tool.Enums;
+using ChecksumValidator.CLI.Enums;
 
-namespace CLI_Tool.Dtos;
+namespace ChecksumValidator.CLI.Dtos;
 
 public class ParsedArgumentsDto(string? filePath, string? knownHash, AlgoType algoType = AlgoType.Md5)
 {

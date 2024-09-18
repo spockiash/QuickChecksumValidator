@@ -1,10 +1,10 @@
 using System.Security.Cryptography;
 using System.Text;
-using CLI_Tool.Dto;
-using CLI_Tool.Dtos;
-using CLI_Tool.Enums;
+using ChecksumValidator.CLI.Dto;
+using ChecksumValidator.CLI.Dtos;
+using ChecksumValidator.CLI.Enums;
 
-namespace CLI_Tool;
+namespace ChecksumValidator.CLI;
 
 public class ChecksumProvider : IChecksumProvider
 {

@@ -1,7 +1,7 @@
 namespace TestProject1;
 
-using CLI_Tool;
-using CLI_Tool.Enums;
+using ChecksumValidator.CLI;
+using ChecksumValidator.CLI.Enums;
 using Xunit;
 
 public class ArgumentParserTests

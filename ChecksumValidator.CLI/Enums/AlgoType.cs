@@ -1,4 +1,4 @@
-namespace CLI_Tool.Enums;
+namespace ChecksumValidator.CLI.Enums;
 
 public enum AlgoType
 {

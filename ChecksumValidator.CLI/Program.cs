@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using CLI_Tool;
-using CLI_Tool.Dtos;
-using CLI_Tool.Helpers;
+using ChecksumValidator.CLI;
+using ChecksumValidator.CLI.Dtos;
+using ChecksumValidator.CLI.Helpers;
 
 Initialize(args);
 PerformHash();

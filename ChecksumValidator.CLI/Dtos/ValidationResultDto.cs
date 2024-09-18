@@ -1,6 +1,6 @@
-using CLI_Tool.Enums;
+using ChecksumValidator.CLI.Enums;
 
-namespace CLI_Tool.Dto;
+namespace ChecksumValidator.CLI.Dto;
 
 public class ValidationResultDto(bool validationSuccess, string pathToFile, string knownHash, string calculatedHash, AlgoType usedAlgoType)
 {

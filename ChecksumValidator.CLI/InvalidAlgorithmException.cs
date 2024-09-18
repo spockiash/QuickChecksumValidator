@@ -1,4 +1,4 @@
-namespace CLI_Tool;
+namespace ChecksumValidator.CLI;
 
 public class InvalidAlgorithmException : Exception
 {

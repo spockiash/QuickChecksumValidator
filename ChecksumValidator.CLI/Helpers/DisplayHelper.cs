@@ -1,10 +1,10 @@
 using System.Text;
-using CLI_Tool.Dto;
-using CLI_Tool.Enums;
+using ChecksumValidator.CLI.Dto;
+using ChecksumValidator.CLI.Enums;
 using CommandLine;
 using CommandLine.Text;
 
-namespace CLI_Tool.Helpers;
+namespace ChecksumValidator.CLI.Helpers;
 
 public static class DisplayHelper
 {

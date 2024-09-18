@@ -1,9 +1,9 @@
-using CLI_Tool.Dtos;
-using CLI_Tool.Enums;
-using CLI_Tool.Helpers;
+using ChecksumValidator.CLI.Dtos;
+using ChecksumValidator.CLI.Enums;
+using ChecksumValidator.CLI.Helpers;
 using CommandLine;
 
-namespace CLI_Tool;
+namespace ChecksumValidator.CLI;
 
 public class ArgumentParser
 {

@@ -1,6 +1,6 @@
-using CLI_Tool;
-using CLI_Tool.Dtos;
-using CLI_Tool.Enums;
+using ChecksumValidator.CLI;
+using ChecksumValidator.CLI.Dtos;
+using ChecksumValidator.CLI.Enums;
 
 namespace TestProject1;
 
