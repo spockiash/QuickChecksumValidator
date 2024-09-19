@@ -18,9 +18,9 @@ public static partial class Program
         ArgParser = new ArgumentParser(with => with.HelpWriter = null);
         try
         {
-            ParsedArguments = ArgParser.ParseArguments(args);
+            ParsedArguments = ArgumentParser.ParseArguments(args);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Environment.Exit(1);
         }

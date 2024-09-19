@@ -18,7 +18,7 @@ public class ArgumentParser
 
     private static Parser? Parser { get; set; }
     
-    public ParsedArgumentsDto ParseArguments(string[] args)
+    public static ParsedArgumentsDto ParseArguments(string[] args)
     {
         var parsedArguments = new ParsedArgumentsDto(null, null);
         var parsingResult = Parser?.ParseArguments<Options>(args);
@@ -63,7 +63,6 @@ public class ArgumentParser
             DisplayHelper.DisplaySupportedAlgorithms();
             throw; // Exit the program with an error code
         }
-        return AlgoType.Md5;
     }
 
     private static void HandleGenericError(Error error)
@@ -85,13 +84,17 @@ public class ArgumentParser
     /// </summary>
     public static AlgoType ParseAlgorithm(string? algorithmString)
     {
+        // Attempt to parse the string to an AlgoType enum
         var success = Enum.TryParse(typeof(AlgoType), algorithmString, true, out var algoEnum);
-        
-        if (success && algoEnum != null)
+
+        // If parsing is successful, cast and return the parsed enum value
+        if (success)
         {
-            // If parsing succeeds, cast and return the parsed enum value
-            return (AlgoType)(algoEnum);
+            // ReSharper disable once NullableWarningSuppressionIsUsed
+            //Null check is redundant here thanks to Enum.TryParse method
+            return (AlgoType)algoEnum!;
         }
+
 
         // If parsing fails, print the supported algorithms and return the default
         throw new InvalidAlgorithmException($"Invalid algorithm specified: {algorithmString ?? "null"}");

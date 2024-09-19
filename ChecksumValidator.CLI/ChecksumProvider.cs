@@ -21,7 +21,7 @@ public class ChecksumProvider : IChecksumProvider
             parsedArguments.KnownHash, computedChecksum, parsedArguments.SelectedAlgorithm);
     }
 
-    private string ComputeHash(string path, AlgoType algorithmType)
+    private static string ComputeHash(string path, AlgoType algorithmType)
     {
         try
         {
