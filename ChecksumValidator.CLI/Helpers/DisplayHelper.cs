@@ -1,11 +1,13 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using ChecksumValidator.CLI.Dto;
 using ChecksumValidator.CLI.Enums;
+using ChecksumValidator.CLI.Resources;
 using CommandLine;
 using CommandLine.Text;
 
 namespace ChecksumValidator.CLI.Helpers;
-
+[ExcludeFromCodeCoverage]
 public static class DisplayHelper
 {
     public static void DisplayError(string error)

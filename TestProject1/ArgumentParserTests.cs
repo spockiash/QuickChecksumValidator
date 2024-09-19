@@ -1,85 +1,30 @@
-namespace TestProject1;
-
+using System.Runtime.InteropServices;
 using ChecksumValidator.CLI;
+using ChecksumValidator.CLI.Dtos;
 using ChecksumValidator.CLI.Enums;
-using Xunit;
+
+namespace TestProject1;
 
 public class ArgumentParserTests
 {
-    [Fact]
-    public void ParseAlgorithm_ValidSHA256String_ReturnsSHA256Enum()
+    private ArgumentParser _parser = new ArgumentParser(with => with.HelpWriter = null);
+    [Theory]
+    [MemberData(nameof(TestData.ParsedArgumentsData), MemberType = typeof(TestData))]
+    public  void ArgumentParserTest(string[] arguments, ParsedArgumentsDto expectedParsedDto)
     {
-        // Act
-        var result = ArgumentParser.ParseAlgorithm("SHA256");
-
-        // Assert
-        Assert.Equal(AlgoType.Sha256, result);
+        //act
+        var result = _parser.ParseArguments(arguments);
+        //assert
+        Assert.Equal(expectedParsedDto.FilePath, result.FilePath);
+        Assert.Equal(expectedParsedDto.KnownHash, result.KnownHash);
+        Assert.Equal(expectedParsedDto.SelectedAlgorithm, result.SelectedAlgorithm);
     }
 
-    [Fact]
-    public void ParseAlgorithm_ValidSHA1String_ReturnsSHA1Enum()
+    [Theory]
+    [MemberData(nameof(TestData.InvalidAlgorithmSelectionData), MemberType = typeof(TestData))]
+    public void ArgumentParserTestWithInvalidArguments_ThrowsException(string[] arguments)
     {
-        // Act
-        var result = ArgumentParser.ParseAlgorithm("SHA1");
-
-        // Assert
-        Assert.Equal(AlgoType.Sha1, result);
-    }
-
-    [Fact]
-    public void ParseAlgorithm_ValidMD5String_ReturnsMD5Enum()
-    {
-        // Act
-        var result = ArgumentParser.ParseAlgorithm("MD5");
-
-        // Assert
-        Assert.Equal(AlgoType.Md5, result);
-    }
-
-    [Fact]
-    public void ParseAlgorithm_InvalidString_ReturnsDefaultMD5Enum()
-    {
-        // Act
-        Action act = () => ArgumentParser.ParseAlgorithm("invalidAlgo");
-        // Assert
+        Action act = () => _parser.ParseArguments(arguments);
         Assert.Throws<InvalidAlgorithmException>(act);
-    }
-
-    [Fact]
-    public void ParseAlgorithm_NullString_ReturnsDefaultMD5Enum()
-    {
-        // Act
-        Action act = () => ArgumentParser.ParseAlgorithm(null);
-        // Assert
-        Assert.Throws<InvalidAlgorithmException>(act);
-    }
-
-    [Fact]
-    public void ParseAlgorithm_EmptyString_ReturnsDefaultMD5Enum()
-    {
-        // Act
-        Action act = () => ArgumentParser.ParseAlgorithm("");
-        // Assert
-        Assert.Throws<InvalidAlgorithmException>(act);
-    }
-
-    [Fact]
-    public void ParseAlgorithm_ValidLowercaseString_ReturnsCorrectEnum()
-    {
-        // Act
-        var result = ArgumentParser.ParseAlgorithm("sha256");
-
-        // Assert
-        Assert.Equal(AlgoType.Sha256, result); // Should correctly parse case-insensitive input
-    }
-
-    [Fact]
-    public void ParseAlgorithm_ValidMixedCaseString_ReturnsCorrectEnum()
-    {
-        // Act
-        var result = ArgumentParser.ParseAlgorithm("Md5");
-
-        // Assert
-        Assert.Equal(AlgoType.Md5, result); // Should correctly parse mixed-case input
     }
 }

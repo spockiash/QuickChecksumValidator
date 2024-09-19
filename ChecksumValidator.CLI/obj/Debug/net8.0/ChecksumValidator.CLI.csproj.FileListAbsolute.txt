@@ -22,3 +22,4 @@
 /home/bobo/RiderProjects/QuickChecksumValidator/ChecksumValidator.CLI/obj/Debug/net8.0/ChecksumValidator.CLI.Resources.DisplayResources.resources
 /home/bobo/RiderProjects/QuickChecksumValidator/ChecksumValidator.CLI/obj/Debug/net8.0/ChecksumValidator.CLI.Resources.DisplayResources.cs-cz.resources
 /home/bobo/RiderProjects/QuickChecksumValidator/ChecksumValidator.CLI/obj/Debug/net8.0/ChecksumValidator.CLI.sourcelink.json
+/home/bobo/RiderProjects/QuickChecksumValidator/ChecksumValidator.CLI/bin/Debug/net8.0/Resources/DisplayResources.resx

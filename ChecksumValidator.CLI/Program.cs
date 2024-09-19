@@ -1,12 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Diagnostics.CodeAnalysis;
 using ChecksumValidator.CLI;
 using ChecksumValidator.CLI.Dtos;
 using ChecksumValidator.CLI.Helpers;
 
 Initialize(args);
 PerformHash();
-
+[ExcludeFromCodeCoverage]
 public static partial class Program
 {
     private static ArgumentParser? ArgParser { get; set; }
@@ -15,7 +16,14 @@ public static partial class Program
     private static void Initialize(string[] args)
     {
         ArgParser = new ArgumentParser(with => with.HelpWriter = null);
-        ParsedArguments = ArgParser.ParseArguments(args);
+        try
+        {
+            ParsedArguments = ArgParser.ParseArguments(args);
+        }
+        catch (Exception e)
+        {
+            Environment.Exit(1);
+        }
     }
 
     private static void PerformHash()

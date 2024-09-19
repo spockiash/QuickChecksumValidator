@@ -1,7 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
 using ChecksumValidator.CLI.Enums;
 
 namespace ChecksumValidator.CLI.Dtos;
-
+[ExcludeFromCodeCoverage]
 public class ParsedArgumentsDto(string? filePath, string? knownHash, AlgoType algoType = AlgoType.Md5)
 {
     public string FilePath { get; set; } = filePath ?? string.Empty;

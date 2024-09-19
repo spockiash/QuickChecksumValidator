@@ -15,6 +15,7 @@
       <EmbeddedResource Update="Resources\DisplayResources.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>DisplayResources.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
 

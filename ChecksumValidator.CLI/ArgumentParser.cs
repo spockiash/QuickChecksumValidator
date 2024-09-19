@@ -50,7 +50,7 @@ public class ArgumentParser
         
         return parsedArguments;
     }
-    private AlgoType GetParsedAlgorithm(Options options)
+    private static AlgoType GetParsedAlgorithm(Options options)
     {
         if (options.SelectedAlgorithm == null) return AlgoType.Md5;
         try
@@ -61,7 +61,7 @@ public class ArgumentParser
         {
             Console.WriteLine(e.Message);
             DisplayHelper.DisplaySupportedAlgorithms();
-            Environment.Exit(1); // Exit the program with an error code
+            throw; // Exit the program with an error code
         }
         return AlgoType.Md5;
     }

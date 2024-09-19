@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChecksumValidator.CLI {
+namespace ChecksumValidator.CLI.Resources {
     using System;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DisplayResources {
+    public class DisplayResources {
         
         private static System.Resources.ResourceManager resourceMan;
         
@@ -28,7 +28,7 @@ namespace ChecksumValidator.CLI {
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("CLI_Tool.Resources.DisplayResources", typeof(DisplayResources).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("ChecksumValidator.CLI.Resources.DisplayResources", typeof(DisplayResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
