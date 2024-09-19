@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChecksumValidator.CLI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fec8701b7eb82b9244dc1a7fb7c241f467f002be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75c635f59a5da6b4fb7014f4a2ed0eddc53b76c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChecksumValidator.CLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChecksumValidator.CLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

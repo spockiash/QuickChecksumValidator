@@ -5,17 +5,16 @@ using CommandLine;
 
 namespace ChecksumValidator.CLI;
 
-public class ArgumentParser
+public static class ArgumentParser
 { 
     /// <summary>
     /// Constructs parser object that wraps command line parser provided by NuGet package.
     /// </summary>
     /// <param name="settings">Delegate that accepts parser settings in lambda form, for example: 'with => with.HelpWriter = null'</param>
-    public ArgumentParser(Action<ParserSettings> settings)
+    public static void InitiateParser(Action<ParserSettings> settings)
     {
         Parser = new Parser(settings);
     }
-
     private static Parser? Parser { get; set; }
     
     public static ParsedArgumentsDto ParseArguments(string[] args)

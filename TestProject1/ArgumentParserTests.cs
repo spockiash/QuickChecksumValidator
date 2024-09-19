@@ -9,6 +9,7 @@ public class ArgumentParserTests
     [MemberData(nameof(TestData.ParsedArgumentsData), MemberType = typeof(TestData))]
     public  void ArgumentParserTest(string[] arguments, ParsedArgumentsDto expectedParsedDto)
     {
+        ArgumentParser.InitiateParser(with => with.HelpWriter = null);
         //act
         var result = ArgumentParser.ParseArguments(arguments);
         //assert
@@ -21,6 +22,7 @@ public class ArgumentParserTests
     [MemberData(nameof(TestData.InvalidAlgorithmSelectionData), MemberType = typeof(TestData))]
     public void ArgumentParserTestWithInvalidArguments_ThrowsException(string[] arguments)
     {
+        ArgumentParser.InitiateParser(with => with.HelpWriter = null);
         Action act = () => ArgumentParser.ParseArguments(arguments);
         Assert.Throws<InvalidAlgorithmException>(act);
     }

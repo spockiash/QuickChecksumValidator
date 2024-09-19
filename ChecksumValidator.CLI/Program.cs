@@ -10,12 +10,11 @@ PerformHash();
 [ExcludeFromCodeCoverage]
 public static partial class Program
 {
-    private static ArgumentParser? ArgParser { get; set; }
     private static ParsedArgumentsDto? ParsedArguments { get; set; }
     private static ChecksumProvider? ChecksumProvider { get; set; }
     private static void Initialize(string[] args)
     {
-        ArgParser = new ArgumentParser(with => with.HelpWriter = null);
+        ArgumentParser.InitiateParser(with => with.HelpWriter = null);
         try
         {
             ParsedArguments = ArgumentParser.ParseArguments(args);
